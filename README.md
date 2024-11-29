@@ -9,11 +9,21 @@ JSON_DB is a Python library designed to provide a simple and lightweight solutio
 - Insert, select, update, and delete data within collections.
 - Utilize conditional operations for data manipulation.
 
+## Installation
+
+You can install JSON_DB with PyPI with the command :
+
+```sh
+pip install json_db
+```
+
 ## Usage
 
 Here's a simple example of how to use JSON_DB:
 
 ```python
+from json_db import DB
+
 # Create a database (create the file if needed)
 db = DB('DB.json')
 

@@ -1,5 +1,5 @@
-from files import *
-from queries import *
+from .files import *
+from .queries import *
 
 class DB(object):
     def __init__(self, file):
@@ -75,47 +75,3 @@ class DB(object):
             if self.name in content:
                 content[self.name] = {}
             setFileJSON(self.db.file, content)
-
-
-# Tests
-if __name__ == '__main__':
-    import time
-
-    sleepTime = 3
-    db = DB('test-DB.json')
-
-    test2 = db.getCollection('test2')
-    print('created collection')
-    time.sleep(sleepTime)
-
-    uuids = []
-    for i in range(1, 6):
-        insert_id = test2.queries['insert']({'message': 'I <3 code', 'id': i})
-        print('inserted data', insert_id)
-        uuids.append(insert_id)
-    time.sleep(sleepTime)
-
-    deleted_amt = test2.queries['delete'](lambda uuid, data: data['id'] <= 3)
-    print(f'deleted {deleted_amt} entries')
-    time.sleep(sleepTime)
-
-    selected_items = test2.queries['select'](lambda uuid, data: uuid == uuids[3])
-    print(f'selected {len(selected_items)} entries : ')
-    print(selected_items)
-    time.sleep(sleepTime)
-
-    updated_amt = test2.queries['update'](lambda uuid, data: uuid == selected_items[0]['uuid'], 'Updated data')
-    print(f'updated {updated_amt} entries')
-    time.sleep(sleepTime)
-
-    test2.purge()
-    print('purged collection')
-    time.sleep(sleepTime)
-
-    test2.remove()
-    print('removed collection')
-    time.sleep(sleepTime)
-
-    os.remove('test-DB.json')
-    print('removed file')
-    del db, test2

@@ -1,0 +1,18 @@
+[project]
+name = "json_db"
+version = "0.0.1"
+authors = [
+  { name="BDN_fr", github="https://github.com/BDN-fr" },
+]
+description = "A small json database"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/BDN-fr/json_db"
+Issues = "https://github.com/BDN-fr/json_db/issues"

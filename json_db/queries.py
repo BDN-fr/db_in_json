@@ -1,4 +1,4 @@
-from files import *
+from .files import *
 from uuid import uuid4
 
 # Theses queries must be used in a collection class
