@@ -1,5 +1,5 @@
 import os
-from json_db.main import DB
+from db_in_json.main import DB
 
 def test_1():
     db = DB('temp-DB.json')

@@ -1,6 +1,6 @@
-# JSON_DB: A Simple JSON-Based Database Library
+# DB_in_JSON: A Simple JSON-Based Database Library
 
-JSON_DB is a Python library designed to provide a simple and lightweight solution for managing data using JSON files. It offers basic CRUD (Create, Read, Update, Delete) operations for collections of data, allowing for efficient storage and retrieval.
+DB_in_JSON is a Python library designed to provide a simple and lightweight solution for managing data using JSON files. It offers basic CRUD (Create, Read, Update, Delete) operations for collections of data, allowing for efficient storage and retrieval.
 
 ## Features
 
@@ -11,18 +11,18 @@ JSON_DB is a Python library designed to provide a simple and lightweight solutio
 
 ## Installation
 
-You can install JSON_DB with PyPI with the command :
+You can install DB_in_JSON with PyPI with the command :
 
 ```sh
-pip install json_db
+pip install DB_in_JSON
 ```
 
 ## Usage
 
-Here's a simple example of how to use JSON_DB:
+Here's a simple example of how to use DB_in_JSON:
 
 ```python
-from json_db import DB
+from db_in_json import DB
 
 # Create a database (create the file if needed)
 db = DB('DB.json')
